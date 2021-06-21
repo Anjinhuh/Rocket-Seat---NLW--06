@@ -1,0 +1,81 @@
+.content{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
+    /* BASTANTE DUVIDA NESTA ÁREA, TIRA-LAS NA LIVE DO DIA 21/06 */
+    grid-template-areas:
+    'header header'
+    'left right'
+    ;
+
+}
+header{
+    grid-area: header;
+}
+
+#bg{
+    grid-area: left;
+
+    background: url('/assets/home-bg-img.svg') no-repeat top/contain;
+}
+
+main{
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+
+}
+main .container{
+    width: min(36.3rem 100%); /* **MIN** DEFINE VALOR MINIMO E MÁXIMO || AJUDA EM TELAS MUITO GRANDES */
+
+}
+
+main h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px  5vw 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+
+input{
+    border: .2rem solid var(--grey-blue) ; /* 0.2rem == .2rem */
+    padding: 0 1.6rem;
+
+}
+
+input, button, .button{
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+.separator{
+    color: var(--grey-blue);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+.separator-bar{
+    display: flex;
+    background-color: var(--grey-blue);
+    width: 20rem;
+    height: 30rem;
+
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* ALTERACOES MINHAS */
+#bg{
+   width: 75.66rem;
+   height: 66.45rem;
+   margin-left: -6.3rem;
+}
+#circles-top{
+    grid-area: right;
+    background: url('../assets/circle-top.svg') no-repeat;
+    width: 22.8rem;
+    height: 63.35rem;
+    margin-top: -12rem;
+    margin-left: 54rem;
+
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
